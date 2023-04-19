@@ -2,35 +2,40 @@
 
 Algoritmo Promedio
 	
-	Escribir "Ingrese la cantidad de datos:"
+	Respuesta<-""
 	Repetir
-		
-		Leer n
-		Si n<=0 Entonces
-			Escribir "El número debe ser positivo y distinto de cero."
-			Escribir "Introduzca un número válido."
-		Fin Si
-		
-	Hasta Que n>0
-	
-	acum<-0
-	
-	Para i<-1 Hasta n Hacer
-		Escribir "Ingrese el dato ",i,":"
+		Escribir "INGRESE LA CANTIDAD DE DATOS:"
 		Repetir
-			Leer dato
-			Si dato<0 Entonces
-				Escribir "El dato debe ser positivo."
-				Escribir "Ingrese el dato ",i,":"
+			
+			Leer n
+			Si n<=0 Entonces
+				Escribir "EL NÃšMERO DEBE SER POSITIVO Y DISTINTO DE CERO."
+				Escribir "INTRODUZCA EL NÃšMERO VÃLIDO."
 			Fin Si
-		Hasta Que dato>=0
+			
+		Hasta Que n>0
 		
-		acum<-acum+dato
-	Fin Para
-	
-	prom<-acum/n
-	
-	Escribir "El promedio es: ",prom
+		acum<-0
+		
+		Para i<-1 Hasta n Hacer
+			Escribir "INGRESE EL DATO ",i,":"
+			Repetir
+				Leer dato
+				Si dato<0 Entonces
+					Escribir "EL DATO DEBE SER POSITIVO"
+					Escribir "INGRESE EL DATO ",i,":"
+				Fin Si
+			Hasta Que dato>=0
+			
+			acum<-acum+dato
+		Fin Para
+		
+		prom<-acum/n
+		
+		Escribir "EL PROMEDIO ES: ",prom
+		Escribir "Â¿DESEA CONTINUAR CALCULANDO EL PROMEDIO? SI/NO"
+		Leer respuesta
+	Hasta Que respuesta= "NO"
 	
 FinAlgoritmo
 
